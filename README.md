@@ -22,8 +22,7 @@ do better.
 The dataset was obtained from the **Cancer Imaging Archive CT Colonography dataset**, which can be found and downloaded here: https://wiki.cancerimagingarchive.net/display/Public/CT+COLONOGRAPHY#bc030a1baaff4fc28093435d2a56b883
 <br>
 It was ready-to-use and contained prone and supine DICOM images from same-day validated
-images- 243 negative cases, 69 cases with 6 to 9 mm polyps, and 35 cases which have at least one
-> 10 mm polyp and their histological type(836 patients). There are 3,451 series and 941,771 image
+images- 243 negative cases, 69 cases with 6 to 9 mm polyps, and 35 cases which have at least one > 10 mm polyp and their histological type(836 patients). There are 3,451 series and 941,771 image
 from this end data. Separate files were available for download containing the labels for each patient data. 
 <br>
 Finally due to class imbalance was huge, we took only **Supine** data from each. Samples which did not have the Supine identication were discarded.
@@ -51,27 +50,16 @@ We utilized a log-softmax function with the criterion as Negative Log Likelihood
 <br>
 
 ## Optimization
-We observe the performance and generalization errors of our model, and optimize to resolve potential
+We observed the performance and generalization errors of our model, and optimize to resolve potential
 issues of under/overfitting.
 <br>
-
+We used SGD with momentum to helps accelerate gradients vectors in the right directions, thus leading to faster converging
+<br>
+The training parameters include a weight decay of 0.001 and 0.9 for momentum. And we chose 100 epochs and batch size of 2.
+<br>
+We run it on NYU Prince HPC, using totally 8 hours for training.
 ## Evaluation Metrics
 We propose that the model will successfully classify negative/positive cases of polyps. After reporting
 AUCs, accuracy, and precision, we plan to improve the performance of the model by optimizing the
 hyper-parameters and through regularization.
 
-
-
-
-
-
-
-
-
-
-
-
-
-## References:
-https://wiki.cancerimagingarchive.net/display/Public/CT+COLONOGRAPHY#bc030a1baaff4fc28093435d2a56b883
-<br>
