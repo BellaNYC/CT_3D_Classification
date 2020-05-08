@@ -43,11 +43,12 @@ polyps exist)
 ## Transfer Learning
 We plan to use a **3D Convolutional Neural Network (3D CNN) architecture**. **We used a pre-trained
 weights from the ResNet-18 model**. Due to the similarity in domain and size of 3D DICOM volumes
-and action recognition from video data. We hypothesized that the pre-trained weights are sufficient
+and action recognition from video data (Ccan be found: https://github.com/kenshohara/3D-ResNets-PyTorch). We hypothesized that the pre-trained weights are sufficient
 enough to accurately predict the presence of polyps in our data.
 <br>
 We utilized a log-softmax function with the criterion as Negative Log Likelihood Loss.
 <br>
+
 
 ## Optimization
 We observed the performance and generalization errors of our model, and optimize to resolve potential
