@@ -7,8 +7,9 @@ such as workflow prioritization and clinical decision support, especially for ti
 hemorrhages where immediate diagnosis is crucial. Recently, rapid CTC
 detection of colorectal neoplasia is being assessed as a population screening tool. Here, our aim is
 to develop a deep learning algorithm that detects colorectal neoplasia using CT images.
+<br>
 
-
+## Dataset
 
 
 
